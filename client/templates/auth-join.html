@@ -9,7 +9,7 @@
     <div class="content-scrollable">
       <div class="wrapper-auth">
         <h1 class="title-auth">Join.</h1>
-        <p class="subtitle-auth" >Joining allows you to make private lists</p>
+        <p class="subtitle-auth" >This will appear at the bottom of the supervision form</p>
 
         <form>
           {{#if errorMessages}}
@@ -19,6 +19,20 @@
               {{/each}}
             </div>
           {{/if}}
+
+          <div class="input-symbol  {{errorClass 'name'}}">
+            <input type="text" name="email" placeholder="Name" />
+            <span class="phone icon" title="Name"></span>
+          </div>
+
+          <div class="input-symbol  {{errorClass 'phone'}}">
+            
+
+            <input type="text" name="phone" placeholder="Phone Number" />
+            <span class="" title="Your Email">
+            <i class="fa fa-phone" title="Phone"></i>
+            </span>
+          </div>
 
           <div class="input-symbol  {{errorClass 'email'}}">
             <input type="email" name="email" placeholder="Your Email" />
@@ -35,7 +49,9 @@
             <span class="icon-lock" title="Confirm Password"></span>
           </div>
 
-          <button type="submit" class="btn-primary">Join Now</button>
+ 
+
+          <button type="submit" class="btn-primary">SUBMIT</button>
         </form>
       </div>
 

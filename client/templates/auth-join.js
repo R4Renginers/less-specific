@@ -16,12 +16,20 @@ Template.join.helpers({
 Template.join.events({
   'submit': function(event, template) {
     event.preventDefault();
+    var name = template.$('[name=name]').val();
+    var number = template.$('[name=number]').val();
     var email = template.$('[name=email]').val();
     var password = template.$('[name=password]').val();
     var confirm = template.$('[name=confirm]').val();
 
     var errors = {};
+    if (! name) {
+      errors.name = 'Name required';
+    }
 
+    if (! number) {
+      errors.number = 'Phone Number required';
+    }
     if (! email) {
       errors.email = 'Email required';
     }
